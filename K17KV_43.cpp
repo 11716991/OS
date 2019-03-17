@@ -16,7 +16,7 @@ a:
 scanf("%d",&queue[i]);
 if(queue[i]>=max)
 {printf("!!!!error 606!!!\n");
- printf("Number should not be greater than %d\n",max);
+ printf("Number should not be greater than    %d\n",max);
  goto a;	
 }
 }
