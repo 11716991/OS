@@ -3,34 +3,37 @@
 #include<math.h>
 main()
 {
-int queue[20],n,head,i,j,k,seek=0,max,diff;
-float aver;
-printf("enter the max range of disk\t");
-scanf("%d",&max);
-printf("\nenter the size of queue request\t");
+int i,j,n;
+int array[n],head,point=0,mx,dif;
+float avg; 
+printf("Enter the maximum range of disk:-\t\t");
+scanf("%d",&mx);
+printf("\nEnter the size of the Array:-\t\t");
 scanf("%d",&n);
-printf("enter the queue\t");
+printf("\nEnter the array elements:-\n");
 for(i=1;i<=n;i++)
 {
 a:
-scanf("%d",&queue[i]);
-if(queue[i]>=max)
+printf("\nEnter the %d element:-\t\t",i); 
+scanf("%d",&array[i]);
+if(array[i]>=mx)
 {printf("!!!!error 606!!!\n");
- printf("Number should not be greater than    %d\n",max);
+ printf("Number should not be greater than %d\n",mx);
+ printf("!!!!enter again!!!!");
  goto a;	
 }
 }
-printf("\nenter the initial head position\t");
+printf("\nEnter the initial head position:-\t\t");
 scanf("%d",&head);
-queue[0]=head;
+array[0]=head;
 for(j=0;j<=n-1;j++)
 {
-diff=abs(queue[j+1]-queue[j]);
-seek+=diff;
-printf("move is from %d to %d with seek %d\n",queue[j],queue[j+1],diff);
+dif=abs(array[j+1]-array[j]);
+point+=dif;
+printf("Steps covered from %d  to %d are %d \n",array[j],array[j+1],point);
 }
-printf("total seek time is%d\n",seek);
-aver=seek/(float)n;
-printf("avrage seek time is %f\n",aver);
+printf("\nTotal time taken to run the program is %d\t\t",point);
+avg=point/(float)n;
+printf("\nAverage time taken is %f\t\t",avg);
 getch();
 }
