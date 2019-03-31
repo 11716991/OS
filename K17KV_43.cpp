@@ -4,7 +4,7 @@
 main()
 {
 int i,j,n;
-int array[n],head,point=0,mx,dif;
+int array[n],head,mx,dif,point=0;
 float avg; 
 printf("Enter the maximum range of disk:-\t\t");
 scanf("%d",&mx);
@@ -16,9 +16,9 @@ for(i=1;i<n;i++)
 a:
 printf("\nEnter the %d element:-\t\t",i); 
 scanf("%d",&array[i]);
-if(array[i]>=mx)
+if(array[i]>mx||array[i]<0)
 {printf("!!!!error 606!!!\n");
- printf("Number should not be greater than %d\n",mx);
+ printf("Number should not be greater than %d and less than zero\n",mx);
  printf("!!!!enter again!!!!");
  goto a;	
 }
@@ -31,14 +31,14 @@ if(head>mx||head<0)
  printf("!!Error 505!!\n");
  printf("Head cannot be greater than %d and less than zero\n");
  printf("!!!!Enter again!!!!");
+ goto b;
 }
-goto b;
 array[0]=head;
-for(j=0;j<=n-1;j++)
+for(j=0;j<n;j++)
 {
 dif=abs(array[j+1]-array[j]);
 point+=dif;
-printf("Steps covered from %d  to %d are %d \n",array[j],array[j+1],point);
+printf("Steps covered from %d  to %d are %d \n",array[j],array[j+1],dif);
 }
 printf("\nTotal time taken to run the program is %d\t\t",point);
 avg=point/(float)n;
