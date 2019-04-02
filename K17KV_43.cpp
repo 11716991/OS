@@ -29,7 +29,7 @@ scanf("%d",&head);
 if(head>mx||head<0)
 {
  printf("!!Error 505!!\n");
- printf("Head cannot be greater than %d and less than zero\n");
+ printf("Head cannot be greater than %d and less than zero\n",mx);
  printf("!!!!Enter again!!!!");
  goto b;
 }
