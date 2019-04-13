@@ -40,8 +40,8 @@ dif=abs(array[j+1]-array[j]);
 point+=dif;
 printf("Steps covered from %d  to %d are %d \n",array[j],array[j+1],dif);
 }
-printf("\nTotal time taken to run the program is %d\t\t",point);
+printf("\nTotal Steps taken to move the pointer is %d\t\t",point);
 avg=point/(float)n;
-printf("\nAverage time taken is %f\t\t",avg);
+printf("\nAverage steps taken is %f\t\t",avg);
 getch();
 }
