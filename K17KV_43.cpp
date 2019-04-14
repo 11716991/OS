@@ -35,10 +35,11 @@ if(head>mx||head<0)
 }
 array[0]=head;
 for(j=0;j<n;j++)
-{
+{if(j=n-1){break;}
 dif=abs(array[j+1]-array[j]);
 point+=dif;
 printf("Steps covered from %d  to %d are %d \n",array[j],array[j+1],dif);
+
 }
 printf("\nTotal Steps taken to move the pointer is %d\t\t",point);
 avg=point/(float)n;
